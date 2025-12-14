@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1><i class="fas fa-calculator"></i> Calculatrice</h1>
+            <p>Simple et efficace</p>
+        </header>
+
+        <main>
+            <section class="calculator">
+                <form id="calc-form">
+                    <input type="number" id="numA" placeholder="Nombre A" step="any" required>
+                    
+                    <select id="operation">
+                        <option value="add">+</option>
+                        <option value="subtract">-</option>
+                        <option value="multiply">×</option>
+                        <option value="divide">÷</option>
+                    </select>
+                    
+                    <input type="number" id="numB" placeholder="Nombre B" step="any" required>
+                    
+                    <button type="submit">
+                        <i class="fas fa-equals"></i> Calculer
+                    </button>
+                </form>
+                
+                <div class="result">
+                    <h3>Résultat : <span id="result">-</span></h3>
+                </div>
+                
+                <div id="errors"></div>
+            </section>
+
+            <section class="history">
+                <h2><i class="fas fa-history"></i> Historique</h2>
+                <div class="history-card">
+                    <div class="history-header">
+                        <span>Opérations récentes</span>
+                        <button id="clear-history">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                    <ul id="history-list">
+                        <li class="empty">Aucune opération</li>
+                    </ul>
+                    <div class="counter">
+                        Total : <span id="total-ops">0</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 Calculatrice</p>
+            <a href="info.php">Informations PHP</a>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
